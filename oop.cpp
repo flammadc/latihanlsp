@@ -25,15 +25,35 @@ int main(){
 	cout << "Lama menginap 			: ";
 	cin >> ttime;
 
+cout << type << endl;
+cout << ttime << endl;
 	
 	switch (type) {
-	  case 1:
-	    if(1 <= ttime >= 2 ){
-	    	price = ttime * 150000;
-	    	cout << "price = " << price;
-	    	
+		case 1:
+	    if(1 <= ttime && ttime >= 2 ){
+	    	price = ttime * 100000;
+	    	cout << type;
+	    	cout << ttime;
+	    	cout << price;
+		} else if(3 <= ttime && ttime >= 4){
+			price = ttime * 90000;
+			cout << type;
+	    	cout << ttime;
+	    	cout << price;
+		}else if(ttime >= 5){
+			price = ttime * 80000; 
+				cout << type;
+	    	cout << ttime;
+	    	cout << price;
 		}
-		else if(3 <= ttime >= 4){
+	    break;
+		
+	  case 2:
+	    if(1 <= ttime && ttime >= 2 ){
+	    	price = ttime * 150000;
+	    	return price;
+		}
+		else if(3 <= ttime && ttime >= 4){
 			price = ttime * 135000;
 			return price;
 		}
@@ -42,22 +62,12 @@ int main(){
 			return price;
 		}
 		break;
-	  case 2:
-	    if(1 <= ttime >= 2 ){
-	    	price = ttime * 100000;
-		}
-		else if(3 <= ttime >= 4){
-			price = ttime * 90000;
-		}
-		else if(ttime >= 5){
-			price = ttime * 80000; 
-		}
-	    break;
+	  
 	  	case 3:
-	     if(1 <= ttime >= 2 ){
+	     if(1 <= ttime && ttime >= 2 ){
 	    	price = ttime * 200000;
 		}
-		else if(3 <= ttime >= 4){
+		else if(3 <= ttime && ttime >= 4){
 			price = ttime * 180000;
 		}
 		else if(ttime >= 5){
