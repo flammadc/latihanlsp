@@ -28,40 +28,47 @@ int main(){
 	
 	switch (type) {
 	  case 1:
-	    switch(ttime){
-	    	case 1:
-	    		price = 1 * 100000;
-	    		break;
-	    	case 2:
-	    		price = 2 * 100000;
-	    		break;
-			case 3:
-	    		price = 3 * 90000;
-	    		break;
-			case 4:
-	    		price = 4 * 90000;
-	    		break;	
-	    	case <5:
-	    		price = 5 * 90000;
-	    		break;
-	    	default:
-	    		price = 
-		}
 	    if(1 <= ttime >= 2 ){
-	    	ttime = ttime * 100000;
+	    	price = ttime * 150000;
+	    	cout << "price = " << price;
+	    	
+		}
+		else if(3 <= ttime >= 4){
+			price = ttime * 135000;
+			return price;
+		}
+		else if(ttime >= 5){
+			price = ttime * 120000; 
+			return price;
 		}
 		break;
 	  case 2:
-	    cout << "Tuesday";
+	    if(1 <= ttime >= 2 ){
+	    	price = ttime * 100000;
+		}
+		else if(3 <= ttime >= 4){
+			price = ttime * 90000;
+		}
+		else if(ttime >= 5){
+			price = ttime * 80000; 
+		}
 	    break;
-	  case 3:
-	    cout << "Wednesday";
+	  	case 3:
+	     if(1 <= ttime >= 2 ){
+	    	price = ttime * 200000;
+		}
+		else if(3 <= ttime >= 4){
+			price = ttime * 180000;
+		}
+		else if(ttime >= 5){
+			price = ttime * 160000; 
+		}
 	    break;
+	    return price;
 	  
 	}
 	
 	cout << "Total harga			: ";
-	price = 150000;
 	cout << price;
 	cout << endl;
 	
