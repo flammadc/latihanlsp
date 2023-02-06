@@ -1,6 +1,8 @@
 #include <iostream>
 #include <bits/stdc++.h>
+
 using namespace std;
+
 void ascending(int nums[], int length){
 	int i,j,k;
 	for(i = 0; i < length-1; i++){
@@ -8,10 +10,6 @@ void ascending(int nums[], int length){
 			if(nums[j] > nums[j+1]){
 				swap(nums[j], nums[j+1]);
 			}
-//			for(k = 0; k < length; k++){
-//				cout << nums[k] << " ";
-//			}
-//			cout << endl;
 		}
 	}
 }
@@ -23,10 +21,6 @@ void descending(int nums[], int length){
 			if(nums[j] < nums[j+1]){
 				swap(nums[j], nums[j+1]);
 			}
-//			for(k = 0; k < length; k++){
-//				cout << nums[k] << " ";
-//			}
-//			cout << endl;
 		}
 	}
 }
@@ -35,7 +29,6 @@ void print(int nums[], int length){
 	int i;
 	for(i = 0; i < length; i++){
 		cout << nums[i]<< " ";
-//		cout << endl;
 	}
 }
 
@@ -55,38 +48,36 @@ void mean(int nums[], int length){
 }
 
 int main(){
-//	int nums[3] = {7,5,9};
 	int nums[3];
 	int length = sizeof(nums)/sizeof(nums[0]);
 	cout << "Masukan tiga buah nilai\n";
 	for(int i = 0; i < length; i++){
-		cout << "Nilai ke-" << i+1 << " :";
+		cout << "Nilai ke-" << i+1 << " : ";
 		cin >> nums[i];
 	}
 	
 	
-	//	sorting section
+	//	start sorting section
 	ascending(nums, length);
-	cout << "Sorted array ascending" << endl;
-	print(nums, length);
-	descending(nums, length);
-	cout << "\nSorted array descending" << endl;
+	cout << "Sorted Array Ascending : ";
 	print(nums, length);
 	cout << endl;
-	//	sorting section
+	descending(nums, length);
+	cout << "Sorted Array Descending : ";
+	print(nums, length);
+	cout << endl;
+	//	end sorting section
 	
-//	max
-
-	cout << "MAX: ";
+	//	max
+	cout << "Nilai Max : ";
 	descending(nums, length);
 	zerodex(nums, length);
 
-
-	cout << "MIN: ";
+	cout << "Nilai Min : ";
 	ascending(nums, length);
 	zerodex(nums, length);
 
-	cout << "MEAN: ";
+	cout << "Nilai Mean : ";
 	mean(nums,length);
 	return 0;
 }
