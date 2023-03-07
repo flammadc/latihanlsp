@@ -2,6 +2,8 @@
 #include <bits/stdc++.h>
 
 using namespace std;
+char choice;
+bool repeat = true;
 
 void ascending(int nums[]){
 	int i,j;
@@ -26,7 +28,8 @@ void descending(int nums[]){
 }
 
 void mean(int nums[]){
-	int i,j,k;
+	int i;
+	float j,k;
 	for(i = 0; i < 3; i++){
 		j += nums[i];
 		k = j / 3;
@@ -45,9 +48,9 @@ void print(int nums[]){
 	}
 }
 
-
-main(){
-	int i, nums[3];
+void ui(){
+    int i, nums[3];
+    system("cls");
 	
 	cout << "Masukan Tiga Buah Nilai" << endl;
 	cout << "Nilai A : "; cin >> nums[0];
@@ -80,6 +83,21 @@ main(){
 	
 	cout << "Nilai Rata Rata : ";
 	mean(nums);
+	
+	cout << endl;
+}
+
+main(){
+	while(repeat){
+	    ui();
+	    cout << "Repeat? :"; cin >> choice;
+	    if(choice == 'Y' || choice == 'y'){
+	        repeat == true;
+	    }
+	    if(choice == 'N' || choice == 'n'){
+	        repeat == false;
+	    }
+	}
 	
 	
 }
